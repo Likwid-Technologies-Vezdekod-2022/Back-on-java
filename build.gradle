@@ -17,6 +17,8 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'io.github.cdimascio:dotenv-java:2.2.4'
+    implementation 'com.github.vladimir-bukhtoyarov:bucket4j-core:4.7.0'
 }
 
 tasks.named('test') {
