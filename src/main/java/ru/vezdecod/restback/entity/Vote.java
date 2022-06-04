@@ -2,31 +2,31 @@ package ru.vezdecod.restback.entity;
 
 public class Vote {
     private String phone;
-    private String email;
+    private String artist;
 
     public String getPhone() {
         return phone;
     }
 
-    public String getEmail() {
-        return email;
+    public String getArtist() {
+        return artist;
     }
 
     public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 
-    public Vote(String phone, String email) {
+    public Vote(String phone, String artist) {
         this.phone = phone;
-        this.email = email;
+        this.artist = artist;
     }
 
     @Override
     public String toString() {
-        return phone + " " + email;
+        return phone + " " + artist;
     }
 }
