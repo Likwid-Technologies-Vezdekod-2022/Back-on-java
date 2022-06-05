@@ -1,6 +1,6 @@
-package ru.vezdecod.restback.entity;
+package ru.vezdecod.restback.responses;
 
-public class VotesCollection {
+public class VotesListResponse {
     private final String name;
 
     public String getName() {
@@ -13,7 +13,7 @@ public class VotesCollection {
 
     private int votes;
 
-    public VotesCollection(String name, int votes) {
+    public VotesListResponse(String name, int votes) {
         this.name = name;
         this.votes = votes;
     }

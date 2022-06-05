@@ -1,8 +1,16 @@
 package ru.vezdecod.restback.entity;
 
+import java.util.Date;
+
 public class Vote {
     private String phone;
     private String artist;
+
+    private final long saveDate;
+
+    public long getSaveDate() {
+        return saveDate;
+    }
 
     public String getPhone() {
         return phone;
@@ -23,6 +31,7 @@ public class Vote {
     public Vote(String phone, String artist) {
         this.phone = phone;
         this.artist = artist;
+        this.saveDate = new Date().getTime();
     }
 
     @Override
