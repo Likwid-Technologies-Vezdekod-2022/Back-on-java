@@ -16,6 +16,40 @@ public class LegacyInMemoryDataBase {
     private List<String> artists;
     private int sendLimit;
     private List<VoteBucketCollection> voteBucketCollections;
+    private long minWorkTime;
+    private long maxWorkTime;
+    private List<Long> timeList;
+
+    private int requestsAmount;
+    private int userAmount;
+
+    public void setUserAmount(int userAmount) {
+        this.userAmount = userAmount;
+    }
+
+    public int getUserAmount() {
+        return userAmount;
+    }
+
+    public void setRequestsAmount(int requestsAmount) {
+        this.requestsAmount = requestsAmount;
+    }
+
+    public int getRequestsAmount() {
+        return requestsAmount;
+    }
+
+    public void addTimeList(long time){
+        this.timeList.add(time);
+    }
+
+    public void setTimeList(List<Long> timeList) {
+        this.timeList = timeList;
+    }
+
+    public List<Long> getTimeList() {
+        return timeList;
+    }
 
     public VoteBucketCollection addVoteBucketCollection(Vote vote) {
         Bucket bucket = Bucket4j.builder()
@@ -35,14 +69,6 @@ public class LegacyInMemoryDataBase {
 
     public void setTimeLimit(int timeLimit) {
         this.timeLimit = timeLimit;
-    }
-
-    public int getSendLimit() {
-        return sendLimit;
-    }
-
-    public int getTimeLimit() {
-        return timeLimit;
     }
 
     private int timeLimit;
@@ -71,6 +97,7 @@ public class LegacyInMemoryDataBase {
         votes = new ArrayList<>();
         artists = new ArrayList<>();
         voteBucketCollections = new ArrayList<>();
+        timeList = new ArrayList<>();
 
     }
 
